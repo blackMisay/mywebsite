@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://blackMisay.github.io/MyWebsite",
+  "homepage": "https://blackMisay.github.io/mywebsite",
   "dependencies": {
     "gh-pages": "^2.2.0"
   }
