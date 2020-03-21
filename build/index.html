@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-</head>
-<body>
-    <h1>Welcome to my site.</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Web Development, Web Design, DevR, developed by DevR">
+        <meta name="author" content="Raz Carolino">
+        <title>Welcome to CodeBehind | DevR</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script>
+            var myvar = setInterval(myTimer, 1000);                            
+            function myTimer() {
+                var d = new Date();
+                document.getElementById("timeNow").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="brand">
+                    <h1><span class="highlight">Code</span>Behind</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#" target="contact">Contact</a></li>
+                        <li id="timeNow">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="showcase">
+            <div class="container">
+                <h1>Welcome to <span class="highlight">Code</span>Behind</h1>
+                <p><abbr title="CodeBehind">CB</abbr> is simply a dummy text of the printing and typesetting industry. CodeBehind has
+                been the industry's standard dummy text ever since the 1500s when an unknown printer took a 
+                galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting remaining essentially unchanged. It was
+                popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages and
+                more recently with desktop publishing software like Aldus Pagemaker including versions of Lorem 
+                ipsum.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h1>Subscribe for New Updates</h1>
+                <form>
+                    <input type="email" placeholder="Your email...">
+                    <button class="btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <h1>Programming Languages</h1>
+                <div class="pl">
+                    <img src="./img/Html 5_96px.png" alt="">
+                    <h3>HTML5</h3>
+                    <p>1 year</p>
+                </div>
+                <div class="pl">
+                    <img src="./img/CSS3_96px.png" alt="">
+                    <h3>CSS3</h3>
+                    <p>2 years</p>
+                </div>
+                <div class="pl">
+                    <img src="./img/Python_96px.png" alt="">
+                    <h3>Python 3</h3>
+                    <p>3 years</p>
+                </div>
+                <div class="pl">
+                    <img src="./img/Arduino_96px.png" alt="">
+                    <h3>Arduino</h3>
+                    <p>3 years</p>
+                </div>
+                <div class="pl">
+                    <img src="./img/GitHub_96px.png" alt="">
+                    <h3>Github</h3>
+                    <p>2 years</p>
+                </div>
+                <div class="pl">
+                    <img src="./img/Steam_96px.png" alt="">
+                    <h3>Steam</h3>
+                    <p>6 years</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>CodeBehind, Copyright &copy; <time id="now"></time></p>
+        </footer>
+        <script src="./js/page.js"></script>
+    </body>
 </html>

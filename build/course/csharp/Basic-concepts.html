@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="C#, C#.Net, CSharp, Desktop Application, Winform, Windows Form Application, Mobile Application, Mobile App, Web Development, Web Design, DevR, developed by DevR">
+    <meta name="author" content="Raz Carolino">
+    <title>C# Basic Concepts | CodeBehind</title>
+    <link rel="icon" href="./resources/CS.ico" type="image/x-icon">
+    <style>
+        body {
+            margin-top: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        section, header {
+            width: 80%;
+            margin: auto;
+            background-color: whitesmoke;
+            padding: 10px 32px 10px 32px;
+        }
+
+        section h2, strong {
+            color: steelblue;
+        }
+
+        u {
+            cursor: pointer;
+        }
+        
+        abbr {
+            text-decoration: underline;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .code-box {
+            width: 80%;
+            margin: 20px auto;
+            padding: 12px;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+        } 
+        #info {
+            color: black;
+            padding: 1px 12px 1px 12px;
+            background-color: khaki;
+            border-left: 5px solid gold;
+        }
+        #sample {
+            color: white;
+            background-color: rgb(30, 30, 30);
+            border-left: 5px solid steelblue;
+        }
+        .data-type {
+            color: steelblue;
+            /* color: rgb(184, 78, 166); */
+        }
+        .value-type {
+            color: rgb(157,206,168);
+        }
+        .value-type-string {
+            color: rgb(214,157,133);
+        }
+        .comment {
+            color: rgb(106,153,62);
+        }
+
+        /* table layout */
+        table {
+            width: 80%;
+            margin: 33px auto;
+        }
+        table caption {
+            font-weight: bold;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;  
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* table-list-1 */
+        table#table-list-1 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#table-list-1 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#table-list-1 th {
+            background-color: rgb(30,30,30);
+            color: white;
+        }
+
+        /* header navigation */
+        
+        header { background-color: #333;}
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        header li {
+            float: left;
+        }
+
+        header li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        header li a:hover, .dropdown:hover .dropbtn {
+            /* background-color: red; */
+            font-weight: bold;
+        }
+
+        header li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Chapter 1</a>
+                    <div class="dropdown-content">
+                        <a href="Introduction.html">1.1 Introduction</a>
+                        <a href="Basic-concepts.html">1.2 Variable and Literals</a>
+                        <a href="#">1.3 Data Type</a>
+                        <a href="#">1.4 Operator</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Chapter 2</a>
+                    <div class="dropdown-content">
+                        <a href="Introduction.html">2.1 Test 1</a>
+                        <a href="Basic-concepts.html">2.2 Test 2</a>
+                        <a href="#">2.3 Test 3</a>
+                        <a href="#">2.4 Test 4</a>
+                    </div>
+                </li>
+                <li><a href="">Chapter 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Chapter 1 : Basic Concepts</h1>
+        <h2>1.1 Variable</h2>
+        <p>Programs typically use data to perform tasks. 
+           Creating a variable reserves a memory location, or a space in memory, for storing variables. 
+           It is called variable because the information stored in that location can be changed when the 
+           program is running. 
+           To use a variable, it must be declared by specifying the <strong>name</strong> and <strong>data type</strong>. 
+           A variable name, also called an identifier, can contain letters, numbers, and the underscore character '_', and must start with a letter or underscore. </br>
+           Although the name of a variable can be any set of letters and numbers, the best identifier is <em>descriptive</em> 
+           of the data it will contain. This is very important in order to create, understandable and readable.
+        </p>
+        <div class="code-box" id="info">
+            <!-- <h3>For example</h3> -->
+            <p><strong>firstName</strong> and <strong>lastName</strong> are good descriptive variable names. 
+               While, <strong>abc</strong> and <strong>xyz</strong> are not.
+            </p>
+        </div>
+        <h2>1.2 Variable Types</h2>
+        <p>A <strong>data type</strong> defines the information that can be stored in a variable, the size of needed memory 
+           and the operations that can be performed with the variable. </p>
+        
+        <table id="table-list-1">
+            <tr>
+                <th>Variable Type</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Decimal types</td>
+                <td>decimal</td>
+            </tr>
+            <tr>
+                <td>Boolean types</td>
+                <td>true or false value, as assigned</td>
+            </tr>
+            <tr>
+                <td>Integral types</td>
+                <td>int, char, byte, short, long</td>
+            </tr>
+            <tr>
+                <td>Floating types</td>
+                <td>float and double</td>
+            </tr>
+            <tr>
+                <td>Nullable types</td>
+                <td>Nullable data types</td>
+            </tr>
+        </table>
+
+        <p>For example, to store an <span class="data-type"><abbr title="a whole number">integer</abbr></span> value (a whole number) in a variable, use the <span class="data-type"><abbr title="used to declare an integer value.">int</abbr></span> keyword:
+        </p>
+        <div class="code-box" id="sample">
+            <code><span class="data-type">int</span> myAge;</code>
+        </div>
+        <p>The code above declares a variable myAge of type <span class="data-type"><abbr title="a whole number">integer</abbr></span>.</p>
+        <div class="code-box" id="info">
+            <p>A line of code that completes an action is called a <strong>statement</strong>. Each statement in C# must end  with a <strong>semicolon</strong>.</p>
+        </div>
+        <p>You can assign the value of a variable when you declare it:</p>
+        <div class="code-box" id="sample">
+            <code><span class="data-type">int</span> myAge = <span class="value-type">18</span>;</code>
+        </div>
+        <p>or later in your code:</p>
+        <div class="code-box" id="sample">
+            <code><span class="data-type">int</span> myAge;</br>myAge = <span class="value-type">18</span>;</code>
+        </div>
+        <div class="code-box" id="info">
+            <p>Remember that you need to declare the variable before using it.</p>
+        </div>
+        <h2>1.3 Data Types</h2>
+        <p>There are 3 types of data types in C# language.</p>
+        <table id="table-list-1">
+            <tr>
+                <th>Type</th>
+                <th>Data Type</th>
+            </tr>
+            <tr>
+                <td>Value Data Type</td>
+                <td>int, float, double, char, bool, string, etc.</td>
+            </tr>
+            <tr>
+                <td>Reference Data Type</td>
+                <td>String, class, object, and interfaces</td>
+            </tr>
+            <tr>
+                <td>Pointer Data Type</td>
+                <td>Pointers</td>
+            </tr>
+        </table>
+        <h3>1.3.1 Value Data Type</h3>
+        <p>The value data type are integer-based and floating-point based type that supports both signed and unsigned literals.</p>
+        <p>There are 2 types of value data type.</p>
+        <ul>
+            <li><strong>Predefined Data Types</strong> - such as integer, boolean, float, etc. </li>
+            <li><strong>User defined Data Types</strong> - such as structure, enumerations, etc.</li>
+        </ul>
+        <p>There are a number of build-in data types in C#. The most common are:</p>
+        <ul>
+            <li><span class="data-type"><strong>int</strong></span> - used to declare an <span class="data-type"><abbr title="a whole number">integer</abbr></span> value.</li>
+            <li><span class="data-type"><strong>float</strong></span> - floating point number.</li>
+            <li><span class="data-type"><strong>double</strong></span> - double-precision version of <strong>float</strong>.</li>
+            <li><span class="data-type"><strong>char</strong></span> - a single character.</li>
+            <li><span class="data-type"><strong>bool</strong></span> - Boolean that can have only one of two values; <span class="data-type"><abbr title="equivalent to 1.">true</abbr></span> or <span class="data-type"><abbr title="equivalent to 0">false</abbr></span>.</li>
+            <li><span class="data-type"><strong>string</strong></span> - A sequence of characters.</li>
+        </ul>
+        <p>The statements below use C# data types:</p>
+        <div class="code-box" id="sample">
+            <code>
+                <span class="data-type">int</span> num = <span class="value-type">14</span>; </br>
+                <span class="data-type">double</span> pi = <span class="value-type">3.1415</span>; </br>
+                <span class="data-type">char</span> letter = <span class="value-type-string">'R'</span>; </br>
+                <span class="data-type">bool</span> isValid = <span class="value-type">true</span>; </br>
+                <span class="data-type">string</span> fullName = <span class="value-type-string">"Susey Santos"</span>; </br>
+            </code>
+        </div>
+        <div class="code-box" id="info">
+            <p>Note that <strong>char</strong> values are assigned using <b>single quotes</b> and <strong>string</strong> values require <b>double quotes</b>.</p>
+        </div>
+        <h3>1.3.2 Reference Data Type</h3>
+        <p>The reference data types do not contain the actual data stored in a variable, but they contain a reference to the variables. If the data is changed by one 
+            of the variables, the other variable automatically reflects this change in value.</p>
+        <p>There are 2 types of reference data type in C# language.</p>
+        <ul>
+            <li><strong>Predefined Types</strong> - such as objects, String.</li>
+            <li><strong>User Defined Types</strong> - such as classes, interface.</li>
+        </ul>
+        <h3>1.3.3 Pointer Data Type</h3>
+        <p>The pointer in C# language is variable, It is also known as locator or indicator that points to an address of a value.</p>
+        
+        <table id="table-list-1">
+            <caption>Symbol used in pointer</caption>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><b>& (ampersand sign)</b></td>
+                <td>Address operator</td>
+            </tr>
+            <tr>
+                <td><b>* (asterisk sign)</b></td>
+                <td>Indirection operator</td>
+            </tr>
+        </table>
+        <h3>Declaring a pointer</h3>
+        <p>The pointer in C# language can be declared using * (asterisk symbol).</p>
+        <div class="code-box" id="sample">
+            <code>
+                <span class="data-type">int</span> * num; <span class="comment">// pointer to int</span></br>
+                <span class="data-type">char</span> * letter; <span class="comment">// pointer to char</span>
+            </code>
+        </div>
+    </section>
+</body>
+</html>

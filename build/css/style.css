@@ -1,0 +1,149 @@
+/*  CodeBehind main css style
+    Author: Raz
+    Last Modified: 2020; */
+
+body {
+    font: 15px/1.5 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Globals */
+.container {width: 80%; margin: auto; overflow: hidden;}
+
+.btn {
+    height: 38px;
+    background: #039BE5;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+/* Branding name */
+.highlight {color: #039BE5;}
+
+ul {margin: 0; padding: 0;}
+
+/* header */
+header {
+    background-color: #35424A;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #039BE5 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {display: inline; padding: 0 20px 0 20px;}
+
+header #brand {float: left;}
+
+header #brand h1 {margin: 0;}
+
+header nav {float: right; margin-top: 10px;}
+
+header a:hover {color: #039BE5; font-weight:bold;}
+
+/* showcase */
+#showcase {
+    background: url('../img/DSC_0291.JPG') no-repeat 0 -700px; 
+    min-height: 594px; text-align: center;}
+
+#showcase h1 {margin-top: 60px; font-size: 55px; margin-bottom: 10px;}
+
+#showcase p {font-size: 20px;}
+
+
+/* contact subscription */
+#contact { padding: 15px 15px 15px 4px; color: #ffffff; background: #35424A;}
+
+#contact h1 { float: left;}
+
+#contact form { float: right; margin-top: 15px;}
+
+#contact input[type="email"] { padding: 4px; height: 25px; width: 250px;}
+
+/* skill section */
+#skills { margin-top: 20px;}
+
+#skills .pl {
+    float:left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#skills .pl img { width: 90px;}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color:#35424A;
+    text-align: center;
+}
+
+.sample {
+    background-color: #F1F1F1;
+    min-height: 200px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.sample h3 {
+    text-align:left;
+    padding: 0 0 0 20px
+}
+
+.syntax {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    border-left: 5px solid #039BE5;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.syntax p {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.syntax code {
+    font-size: 12px;
+}
+/* Media Queries */
+@media(max-width: 768px) {
+    header #brand,
+    header nav,
+    header nav li,
+    #contact h1,
+    #contact form,
+    #skills .pl {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    #contact button {
+        display: block;
+        width: 100%;
+    }
+    #contact form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
